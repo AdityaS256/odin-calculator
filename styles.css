@@ -41,6 +41,7 @@
     border-style: solid;
     gap: 0.15em;
     transition: 225ms ease-in-out;
+    user-select: none;
 }
 
 #display > * {
@@ -76,6 +77,10 @@ button {
     font-family: 'Inter', sans-serif;
     font-size: medium;
     transition: 225ms ease-in-out;
+}
+
+button:focus {
+    outline: none;
 }
 
 button:hover {
@@ -124,6 +129,10 @@ button:hover {
 
 .br {
     border-radius: 0.15em 0.15em 0.5em 0.15em;
+}
+
+a {
+    color: white;
 }
 
 html, body {
