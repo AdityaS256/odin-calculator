@@ -4,18 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
     <link rel="icon" href="./favicon.png">
 </head>
 <body>
+    <header>
+        <h2><a id="header" href="./index.html">Calculator</a></h2>
+    </header>
     <div id="calculator">
         <div id="display">
-            <p id="equation"></p>
-            <h3 id="curr_fig"></h3>
+            <p id="equation">9 * 10</p>
+            <h3 id="curr_fig">90</h3>
         </div>
         <div id="numpad">
             <div class="row">
-                <button class="ope">Clear</button>
-                <button class="ope">Delete</button>
+                <button class="ope func tr">Clear</button>
+                <button class="ope func tl">Delete</button>
             </div>
             <div class="row">
                 <button class="num">7</button>
@@ -36,10 +43,10 @@
                 <button class="ope">-</button>
             </div>
             <div class="row">
-                <button class="num">.</button>
+                <button class="spe bl">.</button>
                 <button class="num">0</button>
-                <button class="equ">=</button>
-                <button class="ope">+</button>
+                <button class="spe">=</button>
+                <button class="ope br">+</button>
             </div>
         </div>
     </div>

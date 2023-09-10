@@ -1,0 +1,145 @@
+#header {
+    font-family: 'Space Mono', 'Cascadia Code', 'Consolas';
+    font-weight: 100;
+    color: rgb(16, 185, 129);
+    text-decoration: none;
+}
+
+#header:hover {
+    text-decoration: underline;
+}
+
+#calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(5, 18, 42);
+    border-color: rgb(5, 19, 50);
+    border-radius: 1em;
+    border-width: 0.175em;
+    border-style: solid;
+    padding: 0.5em;
+    gap: 0.5em;
+}
+
+#display {
+    display: flex;
+    font-family: 'Space Mono', 'Cascadia Code', 'Consolas';
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    min-height: 8.5em;
+    max-height: 8.5em;
+    min-width: 25.049em;
+    padding: 0.5em;
+    background-color: rgba(16, 185, 129, 0.25);
+    border-color: rgba(16, 185, 129, 0.7);
+    color: rgb(16, 185, 129);
+    border-radius: 0.6em;
+    box-sizing: border-box;
+    border-style: solid;
+    gap: 0.15em;
+    transition: 225ms ease-in-out;
+}
+
+#display > * {
+    padding: 0;
+    margin: 0;
+}
+
+#curr_fig {
+    font-weight: 400;
+    font-size: 2.5em;
+}
+
+#numpad {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35em;
+}
+
+
+.row {
+    display: flex;
+    gap: 0.35em;
+}
+
+button {
+    border-radius: 0.15em;
+    background-color: rgba(129, 140, 248, 0.25);
+    color: rgb(129, 140, 248);
+    border: none;
+    padding: 0.5em;
+    width: 6em;
+    height: 3em;
+    font-family: 'Inter', sans-serif;
+    font-size: medium;
+    transition: 225ms ease-in-out;
+}
+
+button:hover {
+    background-color: rgba(129, 140, 248, 0.5);
+}
+
+.ope {
+    background-color: rgba(217, 119, 6, 0.25);
+    color: rgb(217, 119, 6);
+}
+
+.ope:hover {
+    background-color: rgba(217, 119, 6, 0.5);
+}
+
+.spe {
+    background-color: rgba(16, 185, 129, 0.25);
+    color: rgb(16, 185, 129);
+}
+
+.spe:hover {
+    background-color: rgba(16, 185, 129, 0.5);
+}
+
+.func {
+    width: 12.35em;
+    background-color: rgba(244, 63, 94, 0.25);
+    color: rgb(244, 63, 94);
+}
+
+.func:hover {
+    background-color: rgba(244, 63, 94, 0.5);
+}
+
+.tr {
+    border-radius: 0.5em 0.15em 0.15em 0.15em;
+}
+
+.tl {
+    border-radius: 0.15em 0.5em 0.15em 0.15em;
+}
+
+.bl {
+    border-radius: 0.15em 0.15em 0.15em 0.5em;
+}
+
+.br {
+    border-radius: 0.15em 0.15em 0.5em 0.15em;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(6, 5, 34);
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    box-sizing: border-box;
+}
