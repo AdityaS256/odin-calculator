@@ -1,12 +1,14 @@
 let curr_fig = document.querySelector("#curr_fig");
 let equation = document.querySelector("#equation");
 
+let freshCalculation = false;
+
 function calculate() {
   eq = curr_fig.textContent.split(" ");
   console.log();
 
   if (eq.length != 3) {
-    return Number(eq[0]);
+    return Number(eq[0]) || "0";
   }
 
   equation.textContent = curr_fig.textContent;
@@ -18,27 +20,33 @@ function calculate() {
   } else if (eq[1] === "*") {
     return Number(eq[0]) * Number(eq[2]);
   } else if (eq[1] === "/") {
+    if (eq[2] === "0") {
+      return "Error";
+    }
     return Number(eq[0]) / Number(eq[2]);
   }
 }
 
 function display(input) {
+  if (freshCalculation && !isNaN(input)) {
+    curr_fig.textContent = "";
+    freshCalculation = false;
+  }
+
   if (input === "Clear") {
     curr_fig.textContent = "";
     equation.textContent = "";
   } else if (input === "Delete") {
     curr_fig.textContent = curr_fig.textContent.slice(0, -1);
-  } else if (
-    input === "=" ||
-    input === "+" ||
-    input === "-" ||
-    input === "*" ||
-    input === "/"
-  ) {
+  } else if (input === "=") {
     curr_fig.textContent = calculate();
-    if (input !== "=") {
-      curr_fig.textContent += ` ${input} `;
+    freshCalculation = true;
+  } else if (input === "+" || input === "-" || input === "*" || input === "/") {
+    if (!freshCalculation) {
+      curr_fig.textContent = calculate();
     }
+    curr_fig.textContent += ` ${input} `;
+    freshCalculation = false;
   } else if (curr_fig.textContent.length <= 15) {
     curr_fig.textContent += input;
   }
